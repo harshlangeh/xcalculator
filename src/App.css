@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-top: 100px;
 }
 
 .App-logo {
@@ -43,10 +44,14 @@
 
 
 .display{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 10vh;
   width: 50vh;
-  border: 1px solid black;
-  margin: 10vh;
+  /* border: 1px solid black; */
+  margin: 1vh;
 }
 
 .button-body{
@@ -55,6 +60,7 @@
   align-items: center;
   height: 10vh;
   width: 50vh;
+  
 }
 
 /* .button {
@@ -72,6 +78,7 @@
   display: grid;
   grid-template-columns: repeat(4, 55px);
   gap: 10px;
+
 }
 
 
