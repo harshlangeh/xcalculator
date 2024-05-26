@@ -11,21 +11,29 @@ function App() {
   const handleButtonClick = (value) => {
     console.log(value)
     if (value === '=') {
-      try {
-        setResult(eval(input));
-      } catch (error) {
-        setResult(error)
+      if (input.trim() === "") {
+        setResult("Error");
+      } else {
+        const operators = ['+', '-', '*', '/'];
+        if (operators.includes(input.trim().slice(-1))) {
+          setResult("Error");
+        } else {
+          try {
+            setResult(eval(input));
+          } catch (error) {
+            setResult("Error");
+          }
+        }
       }
     } else if (value === 'C') {
-      setInput("")
-      setResult("")
+      setInput("");
+      setResult("");
     } else {
-      setInput((prev)=> prev + value)
+      setInput((prev) => prev + value);
     }
-
   };
 
-   console.log("result = ",result)
+  console.log("result = ",result)
 
   return (
     <div className="App">
